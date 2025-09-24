@@ -1,4 +1,4 @@
-#hw24
+#hw2
 a = float(input("Nhap chieu rong cua hcn la:"))
 b = float(input("nhap chieu dai cua hcn la:"))
 if(0 < a < b):
