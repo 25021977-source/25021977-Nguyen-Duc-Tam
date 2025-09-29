@@ -1,5 +1,6 @@
-n = int(input("Nhap so nguyen n:"))
-if n % 2 == 0 : 
-    print("even")
-else :
-    print("odd")
+n = int(input("nhap 1 so nguyen n :"))
+A = n % 10
+if A == 5 :
+  print("True")
+else:
+  print("Flase")
