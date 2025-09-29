@@ -1,5 +1,7 @@
-n = int(input("Nhap so nguyen n :"))
-if n % 3 == 0 and n % 5 == 0:
-  print("True")
-else : 
-  print("Flase")
+ch = input("NHap 1 ky tu :")
+if ch.isalpha():
+  print("ky tu la chu cai:")
+elif ch.isdigit():
+  print("ky tu la chu so:")
+else :
+  print("Khong phai chu cai cung khong phai chu so")
