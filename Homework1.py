@@ -1,6 +1,5 @@
-n = int(input("nhap 1 so nguyen n :"))
-A = n % 10
-if A == 5 :
+n = int(input("Nhap so nguyen n :"))
+if n % 3 == 0 and n % 5 == 0:
   print("True")
-else:
+else : 
   print("Flase")
