@@ -1,10 +1,3 @@
-#Bài 2: Nhập vào bán kính của hình tròn. In ra màn hình diện tích và chu vi của nó.
-pi = 3.14
-r = float(input("Nhap ban kinh cua hinh tron :"))
-C = 2 * pi * r
-S = pi * r * r
-print("Chu vi hinh tron la:",C)
-print("Dien tich hinh tron la:",S)
 #hw2
  #Bài 3 : Tính tam giác: Nhâp vào ba số a,b,c bất kì. Kiểm tra xem nó có thể  là độ dài ba cạnh hay không,
  #nếu  không  thì in  ra màn  hình  ' Khong la ba  canh cua mot tam  giac'.
