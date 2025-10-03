@@ -1,9 +1,9 @@
-#w3A8
-#[Longer string] 
-#Nhập vào hai chuỗi a, b gồm các chữ cái thường. In ra "True" nếu chuỗi a dài hơn chuỗi b. Ngược lại in ra "False"
-a = input()
-b = input()
-if len(a) > len(b):
-  print("True")
+#w3A9
+#[Triangle] 
+#Nhập vào 3 số nguyên dương a, b, c.
+#Kiểm tra xem a, b, c có cấu thành độ dài cạnh của 1 tam giác được không. Nếu a, b, c cấu tạo thành được một tam giác, in ra "Yes". Ngược lại in ra "No".
+a , b ,c = map(float,input().split())
+if a + b > c and a +  c > b and b + c > a :
+  print("Yes")
 else :
-  print("False")
+  print("No")
