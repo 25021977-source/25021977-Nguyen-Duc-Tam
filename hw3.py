@@ -1,9 +1,8 @@
-#w3A6
-#Even and Odd] 
-#Nhập vào một số nguyên dương x, bạn hãy kiểm tra xem x là số chẵn hay lẻ. 
-#Nếu x là số chẵn, in ra "Even". Nếu x là số lẻ, in ra "Odd"
-x = int(input("Nhap so nguyen duong n:"))
-if x > 0 and x % 2 == 0:
-  print("Even")
-else : 
-  print("odd")
+#w3A7
+#Check negative numbers] 
+#Nhập vào hai số nguyên a, b. Nếu cả hai số a, b đều âm thì in ra "Yes", ngược lại in ra "No"
+a , b = map(int,input().split())
+if a < 0 and b < 0 :
+  print("Yes")
+else :
+  print("No")
