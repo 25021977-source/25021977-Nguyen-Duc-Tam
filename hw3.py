@@ -1,8 +1,9 @@
-#w3A2
-#Hoán đổi hai số không sd biến tạm thời 
-#Sử dụng phép toán XOR trên bit để hoán đổi giá trị của hai biến.
-x , y = map(int,input().split())
-x = x ^ y
-y = x ^ y
-x = x ^ y
-print(x , y)
+#w3A3
+#Kiểm tra xem một số có phải là lũy thừa của 2 hay không 
+#Sử dụng các toán tử bitwise để xác định xem một số có phải là lũy thừa của 2 hay không. 
+#Gợi ý: Đối với lũy thừa của 2, n & (n-1) == 0
+n = int(input())
+if  n > 0 and n & (n -1 ) == 0:
+  print("TRUE")
+else :
+  print("FALSE")
