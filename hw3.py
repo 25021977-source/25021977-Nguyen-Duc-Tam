@@ -1,8 +1,9 @@
-#w3A7
-#Check negative numbers] 
-#Nhập vào hai số nguyên a, b. Nếu cả hai số a, b đều âm thì in ra "Yes", ngược lại in ra "No"
-a , b = map(int,input().split())
-if a < 0 and b < 0 :
-  print("Yes")
+#w3A8
+#[Longer string] 
+#Nhập vào hai chuỗi a, b gồm các chữ cái thường. In ra "True" nếu chuỗi a dài hơn chuỗi b. Ngược lại in ra "False"
+a = input()
+b = input()
+if len(a) > len(b):
+  print("True")
 else :
-  print("No")
+  print("False")
