@@ -1,4 +1,4 @@
-#3A14
+#3A15
 #Xếp loại học lực] 
 #Nhập vào điểm trung bình của một học sinh và in ra học lực của học sinh đó. 
 #Xếp loại học lực theo quy tắc: 
