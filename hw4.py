@@ -1,23 +1,13 @@
-#w4A2
-#[PrimeNumber]
-#VIết chương trình nhập vào một số tới khi được một số nguyên dương thì thôi.
-#Kiểm tra số này có phải là số nguyên tố hay không? 
-while True:
-    n = int(input())
-    if n > 0 :
-      break
-    else :
-      print("Vui long nhap so nguyen duong")
-#Kiểm tra số này có phải là số nguyên tố hay không? 
-if n >= 2 :
-  flag = True
-  for i in range(2 , int(n ** 0.5)  + 1) :
-    if n % i == 0 :
-      flag = False
-      break
-  if flag :
-    print(f"{n} la so nguyen to")
-  else :
-    print(f'{n} khong la so nguyen to')
-else :
-  print(f'{n} khong la so nguyen to')
+#w4A3
+#[Factorial]
+#Viết chương trình tính giai thừa của một số nguyên n cho trước (n!=1×2×…×n)với 0 < n < 100
+n  = int(input())
+if 0 < n < 100 :
+ factorial = 1
+ i = 1
+ while i <= n :
+   factorial *= i
+   i += 1
+ print(f'{n}! = {factorial}')
+else : 
+ print("Vui long nhap n thoa man (0 < n < 100)")
