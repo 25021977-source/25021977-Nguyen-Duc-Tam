@@ -1,14 +1,10 @@
-#Bài 10: Nhập vào số nguyên dương a
-#kiểm tra xem a có phải là số hoàn hảo hay không. Số hoàn hảo là số có tổng các ước (ước nhỏ hơn nó) bằng chính nó, VD: số 6, 28… 
-a = int(input())
-if a > 0:
-  sum = 0
-  for i in range (1 , a ):
-    if a % i == 0 :
-      sum += i
-  if sum == a :
-    print(f'{a} la so hoan hao')
+#Bài 11: Nhập vào số nguyên a
+#Nếu nhập số âm thì yêu cầu nhập lại cho đến khi người dùng nhập đúng số dương. 
+#Nếu người dùng nhập đúng số dương thì in ra “Bạn nhập đúng quy tắc” và dừng chương trình. 
+while True :
+  a = int(input())
+  if a > 0:
+    print("Ban nhap sung quy tac")
+    break
   else :
-    print(f'{a} khong la so hoan hao')
-else :
-  print("Vui long nhap so nguyen duong ")
+    print("Vui long nhap so nguyen duong")
