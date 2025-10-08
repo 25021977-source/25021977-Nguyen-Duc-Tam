@@ -1,8 +1,9 @@
-#Bài 3: Nhập vào số nguyên dương a, in ra bảng cửu chương của a 
+#Bài 5: Nhập vào số nguyên dương n. Tính S = 1 + 2 + 3 + 4 + … + n 
 n = int(input())
-if n > 0:
-  i = 1
-  for i in range(1 , 11):
-    print(f'{n} * {i} = {n * i}')
+s = 0
+if n > 0 :
+ for i in range(1 , n+1) :
+   s +=i
+ print(s)
 else :
-  print("vui long nhap so nguyen duong")
+  print("Vui long nhap so nguyen duong")
