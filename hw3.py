@@ -1,12 +1,10 @@
-#Bài 12: Nhập số nguyên dương n, Cho S(k) = 1 + 2 + 3 + … + k. Tìm k sao cho S(k) lớn nhất nhưng nhỏ hơn n 
-n = int(input("n = ")) 
-if n > 0:
+#Bài 13: Nhập vào số nguyên dương A, tìm n nhỏ nhất sao cho 
+# 1 + 1/2 + 1/3 + 1/4 + ... + 1/n > A 
+A = int(input(f'A = '))
+if A > 0 :
   sum = 0
-  k = 0
-  while sum + (k +1)  < n:
-    k += 1
-    sum += k
-  print(f'k = {k}')
-else :
-  print("Vui long nhap so nguyen duong")
-  
+  n = 1
+  while sum <= A:
+    sum += 1 / n
+    n += 1 
+  print(f'n = {n -1}')
