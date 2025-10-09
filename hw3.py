@@ -1,19 +1,10 @@
-#Bài 14: Nhập vào một dãy số nguyên, dừng nhập khi người dùng nhập -1.
-#Sau khi nhập xong, in số lớn nhất, số nhỏ nhất trong những số vừa nhập. KHÔNG ĐƯỢC dùng mảng 
-max_value = None
-min_value = None
-while True :
-  n = int(input())
-  if n == -1 :
-    break
-  else :
-    if max_value is None:
-      max_value = n
-      min_value = n
-    else :
-      if n > max_value :
-        max_value = n
-      if n < min_value :
-        min_value = n
-print(f'So lon nhat la :{max_value}')
-print(f'So nho nhat la :{min_value}')
+#Bài 15: Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số. Làm bằng nhiều cách nhất có thể, ko dùng mảng. 
+n = int(input())
+if n > 0 :
+ count = 0
+ while n > 0:
+   n //= 10
+   count += 1 
+ print(count)
+else :
+  print("Vui long nhap so nguyen duong")
