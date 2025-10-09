@@ -1,12 +1,19 @@
-#Bài 13: Nhập vào số nguyên dương A, tìm n nhỏ nhất sao cho
-# 1 + 1/2 + 1/3 + 1/4 + ... + 1/n > A
-A = int(input(f'A = '))
-if A > 0 :
-  sum = 0
-  n = 1
-  while sum <= A:
-    sum += 1 / n
-    n += 1
-  print(f'n = {n - 1}')
-else :
-  print("Vui long nhap so nguyen  duong ")
+#Bài 14: Nhập vào một dãy số nguyên, dừng nhập khi người dùng nhập -1.
+#Sau khi nhập xong, in số lớn nhất, số nhỏ nhất trong những số vừa nhập. KHÔNG ĐƯỢC dùng mảng 
+max_value = None
+min_value = None
+while True :
+  n = int(input())
+  if n == -1 :
+    break
+  else :
+    if max_value is None:
+      max_value = n
+      min_value = n
+    else :
+      if n > max_value :
+        max_value = n
+      if n < min_value :
+        min_value = n
+print(f'So lon nhat la :{max_value}')
+print(f'So nho nhat la :{min_value}')
