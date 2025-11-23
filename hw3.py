@@ -1,9 +1,16 @@
-#Bài 15: Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số. Làm bằng nhiều cách nhất có thể, ko dùng mảng. 
+#Bài 16: Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số chẵn, bao nhiêu chữ số lẻ
 n = int(input())
-if n > 0 :
+if n > 0:
   count = 0
-  while 10 ** count <= n :
-    count += 1 
-  print(count)
+  count_1 = 0
+  while n > 0 :
+    a = n % 10
+    if a % 2 == 0 :
+      count += 1 
+    else :
+      count_1 += 1
+    n //= 10
+  print(f'{count} so chan')
+  print(f'{count_1} so le')
 else :
-  print("Vui long nhap so nguyen duong")
+  print("vui long nhap so nguyen duong")
