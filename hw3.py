@@ -1,11 +1,12 @@
-#Bài 18: Nhập vào một số nguyên dương n, kiểm tra xem n có phải là số dạng 3^k hay không
+#Bài 20: Nhập vào số nguyên dương n, đếm xem n có bao nhiêu chữ số là số nguyên tố.
 n = int(input())
-if n > 0:
-  while n % 3 == 0:
-    n //= 3
-  if n == 1 :
-      print("So dang 3^k")
-  else :
-      print("Khong phai")
+count = 0
+if n > 0 :
+  while n > 0 :
+    a = n % 10
+    if a in (2 , 3 , 5 ,7):
+      count += 1
+    n //= 10
+  print(f'{count} so nguyen to')
 else :
-  print("Vui long nhap so nguyen duong")
+  print("vui long nhap so nguyen duong")
