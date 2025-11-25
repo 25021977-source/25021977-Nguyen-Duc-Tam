@@ -1,13 +1,9 @@
-#w4A3
-#[Factorial]
-#Viết chương trình tính giai thừa của một số nguyên n cho trước (n!=1×2×…×n)với 0 < n < 100
-n  = int(input())
-if 0 < n < 100 :
- factorial = 1
- i = 1
- while i <= n :
-   factorial *= i
-   i += 1
- print(f'{n}! = {factorial}')
-else : 
- print("Vui long nhap n thoa man (0 < n < 100)")
+#w4A1
+#[SumOfNumBers]
+#Viết chương trình Python sử dụng một trong 2 loại vòng lặp for hoặc while để
+#tính tống các số nguyên từ 1 đến n. (n <= 1000)
+n = int(input())
+Sum = 0
+for i in range(1 , n+1) :
+  Sum += i
+print(Sum)
