@@ -1,14 +1,7 @@
-#w4A4
-#.[CountingDigits]
-#Viết chương trình nhập vào một số nguyên n và in ra màn hình số chữ số (trừ dấu)của số đó. Không dùng kiểu dữ liệu string.
-n = int(input())
-n = abs(n)
-if n == 0:
-  print(1)
+#w4A5
+n = int(input("Nhap so phan tu n :"))
+a = list(map(int,input().split()))
+if 42 in a :
+    print("I've found the meaning of life!")
 else :
-  count = 0
-  while n  > 0:
-    n //= 10
-    count += 1
-  print(count)
-
+    print("It's a joke!")
