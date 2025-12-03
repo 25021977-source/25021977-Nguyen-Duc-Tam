@@ -1,21 +1,10 @@
-#w4A7
-#"[LargestPrimeFactor]
-#Nhập vào số nguyên dương n (n ≥ 2). Hãy in ra ước số nguyên tố lớn nhất của n." 
-import math
-def nguyen_to(n):
-    if n < 2 :
-        return False
-    for i in range(2 , math.isqrt(n) + 1):
-        if n % i == 0:
-         return False
-    return True
+#w4A14
+#[GCD]
+#Cho hai số m và n là hai số nguyên dương nhập từ bàn phím. Viết chương trìnhtìm ước chung lớn nhất của hai số m và n. 
+def gcd( a , b ) :
+    while b != 0:
+        a , b = b , a % b
+    return a
+m = int(input())
 n = int(input())
-if n >= 2:
- ans = n
- while ans >= 2:
-    if n % ans == 0 and nguyen_to(ans):
-     print(ans)
-     break
-    ans -= 1
-
-   
+print(f'{gcd(m,n)}')
