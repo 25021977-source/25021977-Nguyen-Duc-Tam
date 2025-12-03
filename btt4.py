@@ -1,23 +1,20 @@
-#w4A15
-#[ChickenAndDog]
-#"Vừa gà vừa chó,
-#Bó lại cho tròn,
-#Ba mươi sáu con,
-#Một trăm chân chẵn"
-#Từ bài toán dân gian trên, mở rộng thành chương trình nhận đầu vào là tổng số
-#con và tổng số chân của gà và chó. Nếu tìm được số phù hợp, in ra số lượng gà vàsố lượng chó. Ngược lại, in ra "invalid"
-tong_con = int(input("Nhap tong so con :"))
-tong_chan = int(input("Nhap tong so chan :"))
-def so_nguyen(a) :
-    if a - int(a) != 0 :
-      return False
-    return True
-x = (tong_chan - 2 * tong_con)/2
-y = tong_con - x
-if x >= 0 and y >= 0 and so_nguyen(x) and so_nguyen(y) :
-   print(f"so luong ga : {int(y)}")
-   print(f"so luong cho : {int(x)}")
-else  :
-   print("invalid")
+#W4A11 
+#[EvenDivisors]
+#Viết chương trình đếm số lượng ước số chẵn của số nguyên dương n với n < 10^6
+import math
+def so_uoc_chan(a) :
+    if a >= 10 ** 6 :
+        return False
+    count = 0
+    for i in range(1 , math.isqrt(a)+1) :
+        if a % i == 0 :
+            j = a // i
+            if i % 2 == 0:
+                count += 1
+            if j != i and j % 2 == 0:
+                count += 1 
+           
+    return count
 
-
+n = int(input())
+print(so_uoc_chan(n))
