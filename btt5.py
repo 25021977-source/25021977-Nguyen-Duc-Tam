@@ -1,19 +1,12 @@
-#W5A8
-#Cho hai số nguyên x và y, hãy viết hàm trả về khoảng cách Hamming giữa hai số này.
-# Khoảng cách Hamming giữa hai số nguyên là số lượng vị trí khác nhau giữa hai dãy bits tương ứng của chúng 
-def Hamming(a , a_1 ):
-    a = format(a ,'b')        #format(a,'b') : chuyển số nguyên sang nhị phân
-    a_1 = format(a_1 ,'b')
-    max_len =max(len(a) , len(a_1))
-    a = a.rjust(max_len,'0')           #rjust : thêm kí tự vào phần đầu để đạt độ dài mong muốn
-    a_1 = a_1.rjust(max_len,'0')
+#W5A9 Viết hàm trả về tổng các chữ số của số nguyên dương n
+def tong_duong(n) :
+    n = abs(n)       #abs : hàm lấy trị tuyệt đối
+    tong = 0
+    while n > 0:
+        tong += n % 10
+        n //= 10
+    return tong
 
-    count = 0
-    for i in range(max_len) :
-        if a[i] != a_1[i] :
-            count += 1
-    
-    return c
-x = int(input())
-y = int(input())
-print(Hamming(x,y))
+n = int(input())
+print(tong_duong(n))
+        
