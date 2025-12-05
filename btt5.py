@@ -1,13 +1,12 @@
-#W5A5 Viết hàm đưa vào một list số nguyên và một số nguyên dương k. 
-#Hãy tìm và trả về vị trí củaphần tử đầu tiên có giá trị k trong list số nguyên
-#nếu không có thì trả về -1 
-def list_so_nguyen( n , k ):
-    for i in range( len(n) ) :
-        if n[i] == k :
-            return i
-    return -1
+#W5A6 Viết hàm tính giai thừa. Nhập vào số nguyên n, trả về giai thừa của n (n!) 
+def giai_thua( n ) :
+    if n < 0 :
+        return False 
+    s = 1
+    for i in range(1 , n + 1 ):
+        s *= i
+        i += 1
+    return s
 
-b = list(map(int,input().split()))
 a = int(input())
-print(list_so_nguyen(b , a))
-    
+print(giai_thua(a))
