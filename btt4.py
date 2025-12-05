@@ -1,20 +1,12 @@
-#W4A11 
-#[EvenDivisors]
-#Viết chương trình đếm số lượng ước số chẵn của số nguyên dương n với n < 10^6
-import math
-def so_uoc_chan(a) :
-    if a >= 10 ** 6 :
-        return False
-    count = 0
-    for i in range(1 , math.isqrt(a)+1) :
-        if a % i == 0 :
-            j = a // i
-            if i % 2 == 0:
-                count += 1
-            if j != i and j % 2 == 0:
-                count += 1 
-           
-    return count
-
-n = int(input())
-print(so_uoc_chan(n))
+#W4A12
+#[Interest]
+#Một người có tài khoản tiết kiệm ở ngân hàng và gửi vào X đồng với lãi suất là 0.7% mỗi tháng.
+#Viết chương trình tính số tiền sau N tháng người ấy rút được 
+#(cả gốc và lãi, bỏ qua phần lẻ thập phân).  
+def tien_gui(X , N) :
+    lai_suot = 7 / 1000
+    so_tien = X * ( 1 + lai_suot) ** N
+    return int(so_tien)
+A = int(input("Nhap so tien :"))
+n = int(input("Nhap so thang :"))
+print(tien_gui(A ,n))
