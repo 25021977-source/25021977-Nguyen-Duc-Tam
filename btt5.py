@@ -1,8 +1,7 @@
-# W5A1 Viết hàm truyền vào hai số nguyên a, b. Trả về số lớn hơn trong hai số. def Max_Of_Two(a, b) -> int:
-def Max_Of_Two(x , y):
-    return int(max(x , y))
-
+#W5A2 Viết hàm hoán đổi hai số nguyên. def swap(a, b) -> Tuple[int, int]: 
+def swap( x , y ) :
+    return y , x 
 
 a = int(input())
 b = int(input())
-print(f'{Max_Of_Two(a , b)}')
+print(swap(a , b))
