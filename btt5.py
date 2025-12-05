@@ -1,16 +1,16 @@
-#W5A3 Viết hàm kiểm tra một số có phải là số nguyên tố hay không? 
-import math
-def so_nguyen_to(n) :
-    if n < 2 :
+#W5A4 VIết hàm kiểm tra một số có phải số hoàn hảo hay không, xử lý trên dữ liệu kiểu số nguyên
+def so_hoan_hao(a) :
+    if a <= 1 :
         return False
-    for i in range(2 , math.isqrt(n) + 1 ) :       # isqrt : căn bậc 2
-        if n % i == 0 :
-            return False
-    return True
+    tong = 0
+    for i in range(1 , a):
+        if a % i == 0:
+            tong += i
 
-a = int(input())
-if so_nguyen_to(a) :
-    print(f"{a} la so nguyen to")
+    return tong == a
+
+n = int(input())
+if so_hoan_hao(n) :
+    print(f'{n} la so hoan hao')
 else :
-    print(f"{a} khong la so nguyen to")
-    
+    print((f'{n} khong la so hoan hao'))
