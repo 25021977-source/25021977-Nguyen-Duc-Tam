@@ -1,16 +1,13 @@
-#W5A4 VIết hàm kiểm tra một số có phải số hoàn hảo hay không, xử lý trên dữ liệu kiểu số nguyên
-def so_hoan_hao(a) :
-    if a <= 1 :
-        return False
-    tong = 0
-    for i in range(1 , a):
-        if a % i == 0:
-            tong += i
+#W5A5 Viết hàm đưa vào một list số nguyên và một số nguyên dương k. 
+#Hãy tìm và trả về vị trí củaphần tử đầu tiên có giá trị k trong list số nguyên
+#nếu không có thì trả về -1 
+def list_so_nguyen( n , k ):
+    for i in range( len(n) ) :
+        if n[i] == k :
+            return i
+    return -1
 
-    return tong == a
-
-n = int(input())
-if so_hoan_hao(n) :
-    print(f'{n} la so hoan hao')
-else :
-    print((f'{n} khong la so hoan hao'))
+b = list(map(int,input().split()))
+a = int(input())
+print(list_so_nguyen(b , a))
+    
