@@ -1,12 +1,9 @@
-#W6A2
-#Nhập một dòng số nguyên. In ra list tổng tích lũy (phần tử i là tổng từ đầu
-#tới vị trí i), giữ nguyên thứ tự
-mylist = list(map(int,input().split()))
-output_list = []
-total = 0
-for i in mylist :
-    total += i
-    output_list.append(total)
-print(output_list)
+#W6A3
+#Nhập một tuple số nguyên (một dòng) và số nguyên k (dòng kế). In ra tuple
+#sau khi xoay trái k vị trí. (Giữ nguyên thứ tự tương đối sau xoay; không sắp xếp.)
+my_tuple = tuple(map(int,input().split()))
+k = int(input())
+output_tuple = my_tuple[k:] + my_tuple[:k]
+print(output_tuple)
 
     
