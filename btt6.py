@@ -1,14 +1,12 @@
-#W6A1
-#Nhập vào một dòng gồm các số nguyên. Hãy loại bỏ phần tử trùng nhưng
-#giữ nguyên thứ tự xuất hiện đầu tiên, rồi in ra list kết quả.
-#Yêu cầu in ra đúng dạng list Python, ví dụ [1, 2, 3]
+#W6A2
+#Nhập một dòng số nguyên. In ra list tổng tích lũy (phần tử i là tổng từ đầu
+#tới vị trí i), giữ nguyên thứ tự
 mylist = list(map(int,input().split()))
 output_list = []
-seen_number = set()
+total = 0
 for i in mylist :
-    if i not in seen_number :
-        output_list.append(i)
-        seen_number.add(i)
-
+    total += i
+    output_list.append(total)
 print(output_list)
+
     
