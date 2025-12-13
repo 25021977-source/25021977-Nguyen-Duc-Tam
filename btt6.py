@@ -1,33 +1,20 @@
-#W6A9
-#Viết chương trình nhập vào hai dictionary. Sau đó gộp lại thành một
-#dictionary mới trong đó nếu một key xuất hiện trong cả hai dict, giá trị sẽ
-#được cộng lại, nếu chỉ có trong một dict thì giữ nguyên. In ra dictionary mới
-#theo thứ tự từ điển tăng dần của key.
-#dinh nghia dic
-def input_dic() :
-    dic = {}
-    items = input().split()
-    for i in items :
-        key , value = i.split(':')  # .split(':') tach chuoi
-        dic[key] = int(value)
-    
-    return dic
+#W6A10
+#Viết chương trình nhập vào một danh sách các số nguyên, và số nguyên
+#dương k. In ra list gồm các cặp số khác nhau có tổng bằng k. Mỗi cặp là
+#một tuple, hai số trong hai tuple có thể giống nhau, thứ tự xuất hiện trong danh
+#sách của số thứ nhất nhỏ hơn thứ tự của số thứ 2 tuple trong list được
+#sắp xếp theo thứ tự tăng dần của phần tử đầu tiên trong tuple
+my_list = list(map(int,input().split()))
+k = int(input())
+output_list = []
+for i in range(len(my_list)):
+    for j in range(i + 1 , len(my_list)) :
+        if my_list[i] + my_list[j] == k :
+            output_list.append((my_list[i] , my_list[j]))
 
-dic1 = input_dic()
-dic2 = input_dic()
-dic = {}
-#gop lai
-for key , value in dic1.items() :
-    if key in dic2 :
-        dic[key] = value + dic2[key]
-    else :
-        dic[key] = value
-for key , value in dic2.items() :
-    if key not in dic:
-        dic[key] = value
-#sapxep
-dic_sorted = {}
-for key in sorted(dic.keys()) :     #sorted() sapxep tang dan
-    dic_sorted[key] = dic[key]
+for x in range(len(output_list)) :
+    for y in range(len(output_list) - 1 - x) :
+        if output_list[y][0] > output_list[y+1][0] :
+            output_list[y] , output_list[y+1] = output_list[y+1] , output_list[y]
 
-print(dic_sorted)
+print(output_list)
