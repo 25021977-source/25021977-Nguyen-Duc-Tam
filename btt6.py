@@ -1,11 +1,13 @@
-#W6A8
-#Viết chương trình nhập vào một list các chuỗi, 
-#sau đó đếm số lần xuất hiện của từng chuỗi và lưu vào dictionary.
+#W6A4
+#Nhập một dòng gồm các cặp key:value cách nhau bởi dấu cách. 
+#Tạo dictionary ánh xạ mỗi key -> list các value theo thứ tự xuất hiện.
+#Nếu key lặp lại, thêm vào list của key đó
 my_list = input().split()
 dic = {}
-for i in my_list :
-    if i in dic :
-        dic[i] += 1
+for item in my_list :
+    key , value = item.split(':')
+    if key not in dic :
+        dic[key] = [value]
     else :
-        dic[i] = 1
+        dic[key].append(value)
 print(dic)
