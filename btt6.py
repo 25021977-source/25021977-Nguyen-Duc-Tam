@@ -1,5 +1,11 @@
-#W6A7
-#Viết chương trình nhập vào một tuple, in ra phần tử đầu, phần tử cuối, và tuple đảo ngược
-my_tuple = tuple(map(int,input().split()))
-x = my_tuple[::-1]            # n[::-1] : duyệt tuple từ cuối về đầu
-print(my_tuple[0] , my_tuple[len(my_tuple) - 1] , x)
+#W6A8
+#Viết chương trình nhập vào một list các chuỗi, 
+#sau đó đếm số lần xuất hiện của từng chuỗi và lưu vào dictionary.
+my_list = input().split()
+dic = {}
+for i in my_list :
+    if i in dic :
+        dic[i] += 1
+    else :
+        dic[i] = 1
+print(dic)
