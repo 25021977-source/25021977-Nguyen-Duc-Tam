@@ -1,11 +1,14 @@
-#W6A13
-#[Đảo ngược key và value của dictionary]
-#Nhập vào một dictionary có value là duy nhất (không trùng nhau). Hãy tạo
-#một dictionary mới bằng cách đảo ngược key và value của dictionary ban
-#đầu. In ra dictionary mới.
-my_list = input().split()
-dic = {}
-for item in my_list :
-    key , value = item.split(':')
-    dic[value] = key
-print(dic)
+#W6A14
+#[Giao của hai danh sách]
+#Nhập vào hai dòng, mỗi dòng là một danh sách các số nguyên. Hãy tìm các
+#phần tử chung (giao) của hai danh sách này và in ra một list mới chứa các
+#phần tử chung đó, không trùng lặp.
+my_list1 = list(map(int,input().split()))
+my_list2 = list(map(int,input().split()))
+output_list = []
+for i in my_list1 :
+    if i in my_list2 and i not in output_list :
+        output_list.append(i)
+
+print(output_list)
+
