@@ -1,16 +1,23 @@
-#W6A11
-#[Tách số chẵn và lẻ từ tuple]
-#Nhập vào một tuple chứa các số nguyên. Hãy tạo ra hai tuple mới: một chứa
-#tất cả các số chẵn và một chứa tất cả các số lẻ từ tuple ban đầu, giữ nguyên
-#thứ tự tương đối. In ra hai tuple này trên hai dòng riêng biệt
-my_tuple = tuple(map(int,input().split()))
-output_1 = []
-output_2 = []
-my_list = list(my_tuple)
+#W6A12
+#[Tìm phần tử xuất hiện nhiều nhất]
+#Nhập vào một list các số nguyên. Hãyt trong số đó. tìm số xuất hiện nhiều lần nhất trong list.
+#Nếu có nhiều số cùng có số lần xuất hiện nhiều nhất, hãy in ra số nhỏ nhất
+my_list = list(map(int,input().split()))
+dic = {}
 for i in my_list :
-    if i % 2 == 0:
-        output_1.append(i)
+    if i in dic :
+        dic[i] += 1
     else :
-        output_2.append(i)
-print(tuple(output_1))
-print(tuple(output_2))
+        dic[i] = 1
+
+max_count = 0
+for key , value in dic.items() :     #for key , value in dic.items() :duyet tung cay value trong dic
+    if value > max_count :
+        max_count = value
+
+output_list = []
+for key , value in dic.items() :
+    if value == max_count :
+        output_list.append(key)
+
+print(min(output_list))
