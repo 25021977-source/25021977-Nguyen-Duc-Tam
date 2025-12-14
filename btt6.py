@@ -1,14 +1,13 @@
-#W6A14
-#[Giao của hai danh sách]
-#Nhập vào hai dòng, mỗi dòng là một danh sách các số nguyên. Hãy tìm các
-#phần tử chung (giao) của hai danh sách này và in ra một list mới chứa các
-#phần tử chung đó, không trùng lặp.
-my_list1 = list(map(int,input().split()))
-my_list2 = list(map(int,input().split()))
-output_list = []
-for i in my_list1 :
-    if i in my_list2 and i not in output_list :
-        output_list.append(i)
-
-print(output_list)
-
+#W6A15
+#[Lọc dictionary theo giá trị]
+#Nhập vào một dictionary có key là chuỗi và value là số nguyên, và một số
+#nguyên k ở dòng tiếp theo. Hãy tạo một dictionary mới chỉ chứa các cặp
+#key-value từ dictionary ban đầu mà có value lớn hơn k. In ra dictionary mới.
+my_list = input().split()
+k = int(input())
+dic = {}
+for item in my_list :
+    key , value = item.split(':')
+    if int(value) > k :
+        dic[key] = int(value)
+print(dic)
