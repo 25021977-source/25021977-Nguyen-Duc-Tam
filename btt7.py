@@ -1,19 +1,13 @@
-#W7A1
-#Viết hàm tìm kiếm nhị phân trên một danh sách đã được sắp xếp tăng dần.
-#Trả về chỉ số của phần tu hoặc -1 nếu không tìm thấy. mẫu hàm: def
-#binary_search(arr, left, right, target):
-def binary_search(arr , left , right , target) :
-    while left <= right :
-        mid = (left + right) // 2
-        if arr[mid] == target :
-            return mid
-        elif arr[mid] < target :
-            left = mid + 1
-        else :
-            right = mid -1
-    return -1
-
+#W7A2
+#Cho danh sách arr và một số nguyên x, đếm xem x xuất hiện bao nhiêu lần
+# trong danh sách. def count_occurrences(arr, x) - > int:
+def count_occurrences(arr , x) :
+    sum = 0
+    for i in range(len(arr)):
+        if arr[i] == x :
+            sum += 1
+    return sum
+               
 my_list = list(map(int,input().split()))
-my_list.sort()
-target1 = int(input())
-print(binary_search(my_list , 0 , len(my_list) - 1 , target1 ))
+k = int(input())
+print(count_occurrences(my_list , k))
