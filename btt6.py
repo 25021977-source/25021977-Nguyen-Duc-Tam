@@ -1,13 +1,13 @@
-#W6A15
-#[Lọc dictionary theo giá trị]
-#Nhập vào một dictionary có key là chuỗi và value là số nguyên, và một số
-#nguyên k ở dòng tiếp theo. Hãy tạo một dictionary mới chỉ chứa các cặp
-#key-value từ dictionary ban đầu mà có value lớn hơn k. In ra dictionary mới.
-my_list = input().split()
-k = int(input())
-dic = {}
-for item in my_list :
-    key , value = item.split(':')
-    if int(value) > k :
-        dic[key] = int(value)
-print(dic)
+#W6A19
+#Viết hàm đưa vào 1 list số nguyên, tìm và trả về vị trí có giá trị lớn nhất trong list
+def max_list(my_list) :
+    max_count = my_list[0]
+    max_index = 0
+    for i in range(len(my_list)) :
+        if my_list[i] > max_count :
+            max_count = my_list[i]
+            max_index = i
+    return max_index
+        
+my_list1 = list(map(int,input().split()))
+print(max_list(my_list1))
