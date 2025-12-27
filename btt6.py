@@ -1,15 +1,13 @@
-#W6A22
-#Viết hàm đưa vào 1 list số nguyên, tìm và trả về vị trí có giá trị lớn nhất trong list
-def max_index(my_list) :
-    max_count = my_list[0]
-    max_index = 0
-    for i in range(len(my_list)) :
-        if my_list[i] > max_count :
-            max_count = my_list[i] 
-            max_index = i
-    return max_index
-
+#W6A23
+#VIết hàm xóa đi các số < x có trong mảng
+def remove(my_list , x) :
+    output_list = []
+    for i in my_list :
+        if i >= x :
+            output_list.append(i)
+    return output_list
 my_list1 = list(map(int,input().split()))
-print(max_index(my_list1))
+k = int(input())
+print(remove(my_list1 , k))
 
 
